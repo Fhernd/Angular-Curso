@@ -7,10 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   nombre = 'John Ortiz Ordoñez';
-  edad = 29;
+  edad = 17;
   email = 'joo@mail.co';
   sueldos = [2000, 3000, 5000];
   activo = true;
+  menor = true;
 
   esActivo() {
     return this.activo ? 'Trabajador activo' : 'Trabajador inactivo';

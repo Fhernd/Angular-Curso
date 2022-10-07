@@ -26,3 +26,11 @@
     <button (click)="incrementar()">Incrementar 1</button>
     <button (click)="decrementar()">Decrementar 1</button>
 </div>
+<br>
+<hr>
+<h3>7 - Directiva ngModel</h3>
+Data binding unidirección (modelo a vista):
+<input type="text" [ngModel]="nombre">
+<br>
+Data binding bidireccional (modelo-vista):
+<input type="text" [(ngModel)]="nombre">

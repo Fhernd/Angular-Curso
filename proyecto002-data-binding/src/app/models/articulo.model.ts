@@ -1,4 +1,4 @@
-class Articulo {
+export default class Articulo {
     codigo: number;
     descripcion: string;
     precio: number;

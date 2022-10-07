@@ -12,6 +12,7 @@ export class AppComponent {
   sueldos = [2000, 3000, 5000];
   activo = true;
   menor = true;
+  contador = 1;
 
   esActivo() {
     return this.activo ? 'Trabajador activo' : 'Trabajador inactivo';
@@ -19,5 +20,13 @@ export class AppComponent {
 
   ultimos3Sueldos() {
     return this.sueldos.reduce((a, v) => (a += v, a), 0);
+  }
+
+  incrementar() {
+    ++this.contador;
+  }
+
+  decrementar() {
+    --this.contador;
   }
 }

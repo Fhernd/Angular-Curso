@@ -78,4 +78,8 @@ export class AppComponent {
     this.descripcion = '';
     this.precio = 0;
   }
+
+  hayArticulos() {
+    return Boolean(this.articulos.length);
+  }
 }

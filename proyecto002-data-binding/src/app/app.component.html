@@ -15,7 +15,7 @@
       <td>{{e.descripcion}}</td>
       <td>{{e.precio}}</td>
       <td><button (click)="borrar(e.codigo)">Borrar</button></td>
-      <td><button>Seleccionar</button></td>
+      <td><button (click)="seleccionar(e.codigo)">Seleccionar</button></td>
     </tr>
   </tbody>
 </table>

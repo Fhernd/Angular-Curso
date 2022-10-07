@@ -52,4 +52,30 @@ export class AppComponent {
     this.descripcion = articulo.descripcion;
     this.precio = articulo.precio;
   }
+
+  modificar() {
+    if (!this.codigo) {
+      alert('Debe especificar un código.');
+      return;
+    }
+
+    let articulo : any = this.buscarArticulo(this.codigo);
+
+    if(!articulo) {
+      alert('No existe un artículo con el código especificado.');
+      return;
+    }
+
+    articulo.descripcion = this.descripcion;
+    articulo.precio = this.precio;
+
+    this.limpiarCampos();
+    alert('El artículo se actualizó de forma correcta.');
+  }
+
+  limpiarCampos() {
+    this.codigo = 0;
+    this.descripcion = '';
+    this.precio = 0;
+  }
 }

@@ -1,1 +1,18 @@
-<p>listado-articulos works!</p>
+<div>
+    <table border="1">
+        <thead>
+            <tr>
+                <td>Código</td>
+                <td>Descripción</td>
+                <td>Precio</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let e of articulos">
+                <td>{{e.codigo}}</td>
+                <td>{{e.descripcion}}</td>
+                <td>{{e.precio}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

@@ -17,3 +17,25 @@
   </table>
 </div>
 <ng-template #espera>Esperando datos...</ng-template>
+
+<hr>
+
+<div *ngIf="paises != null; else esperaPaises">
+  <table border="1">
+    <thead>
+      <tr>
+        <td>País</td>
+        <td>Total de casos</td>
+        <td>Total de muertos</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let pais of paises.Countries">
+        <td>{{pais.Country}}</td>
+        <td>{{pais.TotalConfirmed}}</td>
+        <td>{{pais.TotalDeaths}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<ng-template #esperaPaises>Esperando datos de COVID-19...</ng-template>

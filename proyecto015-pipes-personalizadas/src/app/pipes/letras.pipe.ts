@@ -41,24 +41,24 @@ export class LetrasPipe implements PipeTransform {
           case 7:
             return 'sete';
         }
-      } else {
-        switch (value) {
-          case 1:
-            return 'uno';
-          case 2:
-            return 'dos';
-          case 3:
-            return 'tres';
-          case 4:
-            return 'cuatro';
-          case 5:
-            return 'cinco';
-          case 6:
-            return 'seis';
-          case 7:
-            return 'siete';
-        }
       }
+    }
+
+    switch (value) {
+      case 1:
+        return 'uno';
+      case 2:
+        return 'dos';
+      case 3:
+        return 'tres';
+      case 4:
+        return 'cuatro';
+      case 5:
+        return 'cinco';
+      case 6:
+        return 'seis';
+      case 7:
+        return 'siete';
     }
 
     return null;

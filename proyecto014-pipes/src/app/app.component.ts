@@ -6,5 +6,20 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'proyecto014-pipes';
+  nombre = 'John Ortiz Ordoñez';
+  saldo = 1000.50;
+  dias = ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado'];
+  articulos = [
+    {
+      codigo: 1,
+      descripcion: 'papas',
+      precio: 12.33
+    },
+    {
+      codigo: 2,
+      descripcion: 'manzanas',
+      precio: 54
+    }
+  ];
+  fechaActual = new Date();
 }

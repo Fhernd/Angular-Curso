@@ -22,7 +22,7 @@ export class LetrasPipe implements PipeTransform {
           case 6:
             return 'six';
           case 7:
-            return 'six';
+            return 'seven';
         }
       } else if (args[0] == 'portugués') {
         switch (value) {

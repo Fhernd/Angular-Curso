@@ -8,4 +8,16 @@ export class ArticulosService {
   url: string = 'https://scratchya.com.ar/angular/proyecto016/';
 
   constructor(private httpClient: HttpClient) { }
+
+  obtenerArticulos() {
+    return this.httpClient.get(`${this.url}recuperartodos.php`);
+  }
+
+  crearArticulo(articulo: any) {
+    return this.httpClient.post(`${this.url}alta.php`, JSON.stringify(articulo));
+  }
+
+  eliminarArticulo(codigo: number) {
+    return this.httpClient.get(`${this.url}baja.php?codigo=${codigo}`);
+  }
 }

@@ -20,4 +20,12 @@ export class ArticulosService {
   eliminarArticulo(codigo: number) {
     return this.httpClient.get(`${this.url}baja.php?codigo=${codigo}`);
   }
+
+  obtenerArticuloPorCodigo(codigo: number) {
+    return this.httpClient.get(`${this.url}seleccionar.php?codigo=${codigo}`);
+  }
+
+  modificarArticulo(articulo: any) {
+    return this.httpClient.post(`${this.url}modificacion.php`, JSON.stringify(articulo));
+  }
 }

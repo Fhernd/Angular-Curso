@@ -46,4 +46,13 @@ export class AppComponent implements OnInit {
       }
     });
   }
+
+  modificarArticulo() {
+    this.articulosService.modificarArticulo(this.articulo).subscribe((datos: any) => {
+      if (datos['resultado'] == 'OK') {
+        alert(datos['mensaje']);
+        this.obtenerArticulos();
+      }
+    })
+  }
 }

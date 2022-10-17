@@ -28,4 +28,13 @@ export class AppComponent implements OnInit {
       this.articulos = resultado;
     })
   }
+
+  crearArticulo() {
+    this.articulosService.crearArticulo(this.articulo).subscribe((datos: any) => {
+      if (datos['resultado'] == 'OK') {
+        alert(datos['mensaje']);
+        this.obtenerArticulos();
+      }
+    });
+  }
 }

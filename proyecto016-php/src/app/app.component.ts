@@ -53,6 +53,16 @@ export class AppComponent implements OnInit {
         alert(datos['mensaje']);
         this.obtenerArticulos();
       }
-    })
+    });
+  }
+
+  obtenerArticuloPorCodigo(codigo: number) {
+    this.articulosService.obtenerArticuloPorCodigo(codigo).subscribe((datos: any) => {
+      this.articulo = datos[0];
+    });
+  }
+
+  hayRegistros() {
+    return true;
   }
 }

@@ -22,4 +22,17 @@
     </tbody>
   </table>
   <ng-template #sinArticulos><p>No hay artículos</p></ng-template>
+
+  <div>
+    <p>
+      Descripción: <input type="text" [(ngModel)]="articulo.descripcion">
+    </p>
+    <p>
+      Precio: <input type="number" [(ngModel)]="articulo.precio">
+    </p>
+    <p>
+      <button (click)="crearArticulo()">Crear artículo</button><br>
+      <button (click)="modificarArticulo()">Modificar artículo</button>
+    </p>
+  </div>
 </div>

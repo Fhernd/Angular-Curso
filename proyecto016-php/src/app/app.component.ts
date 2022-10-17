@@ -37,4 +37,13 @@ export class AppComponent implements OnInit {
       }
     });
   }
+
+  eliminarArticulo(codigo: number) {
+    this.articulosService.eliminarArticulo(codigo).subscribe((datos: any) => {
+      if (datos['resultado'] == 'OK') {
+        alert(datos['mensaje']);
+        this.obtenerArticulos();
+      }
+    });
+  }
 }

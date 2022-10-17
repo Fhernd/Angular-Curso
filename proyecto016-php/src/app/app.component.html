@@ -1,7 +1,25 @@
 <div>
   <h1>Administración de artículos</h1>
 
-  <table border="1" *ngIf="hayRegistros()">
-
+  <table border="1" *ngIf="hayRegistros(); else sinArticulos">
+    <thead>
+      <tr>
+        <td>Código</td>
+        <td>Descripción</td>
+        <td>Precio</td>
+        <td>Borrar</td>
+        <td>Seleccionar</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let e of articulos">
+        <td>{{e.codigo}}</td>
+        <td>{{e.descripcion}}</td>
+        <td>{{e.precio}}</td>
+        <td><button (click)="eliminarArticulo(e.codigo)">Eliminar</button></td>
+        <td><button (click)="obtenerArticuloPorCodigo(e.codigo)">Seleccionar</button></td>
+      </tr>
+    </tbody>
   </table>
+  <ng-template #sinArticulos><p>No hay artículos</p></ng-template>
 </div>

@@ -4,11 +4,13 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DadoComponent } from './components/dado/dado.component';
+import { PiezaComponent } from './pieza/pieza.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    DadoComponent
+    DadoComponent,
+    PiezaComponent
   ],
   imports: [
     BrowserModule,

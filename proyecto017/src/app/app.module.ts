@@ -5,12 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DadoComponent } from './components/dado/dado.component';
 import { PiezaComponent } from './pieza/pieza.component';
+import { JugadorComponent } from './jugador/jugador.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DadoComponent,
-    PiezaComponent
+    PiezaComponent,
+    JugadorComponent
   ],
   imports: [
     BrowserModule,

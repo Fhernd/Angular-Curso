@@ -12,12 +12,14 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { BarraLateralComponent } from './components/barra-lateral/barra-lateral.component';
 import { PaisColombiaComponent } from './components/pais-colombia/pais-colombia.component';
+import { PaisArgentinaComponent } from './components/pais-argentina/pais-argentina.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     BarraLateralComponent,
-    PaisColombiaComponent
+    PaisColombiaComponent,
+    PaisArgentinaComponent
   ],
   imports: [
     BrowserModule,

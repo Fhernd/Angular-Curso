@@ -13,13 +13,15 @@ import { MatListModule } from '@angular/material/list';
 import { BarraLateralComponent } from './components/barra-lateral/barra-lateral.component';
 import { PaisColombiaComponent } from './components/pais-colombia/pais-colombia.component';
 import { PaisArgentinaComponent } from './components/pais-argentina/pais-argentina.component';
+import { PaisMexicoComponent } from './components/pais-mexico/pais-mexico.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     BarraLateralComponent,
     PaisColombiaComponent,
-    PaisArgentinaComponent
+    PaisArgentinaComponent,
+    PaisMexicoComponent
   ],
   imports: [
     BrowserModule,

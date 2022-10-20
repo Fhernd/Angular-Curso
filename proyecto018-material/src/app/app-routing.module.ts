@@ -5,6 +5,7 @@ import { PaisColombiaComponent } from './components/pais-colombia/pais-colombia.
 import { PaisMexicoComponent } from './components/pais-mexico/pais-mexico.component';
 
 const routes: Routes = [
+  {path: '', component: PaisColombiaComponent}, 
   {path: 'pais-colombia', component: PaisColombiaComponent},
   {path: 'pais-argentina', component: PaisArgentinaComponent},
   {path: 'pais-mexico', component: PaisMexicoComponent},

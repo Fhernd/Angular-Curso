@@ -84,4 +84,12 @@ export class AppComponent {
       this.jugadorActual = 'O';
     }
   }
+
+  reiniciar() {
+    for (let fila = 0; fila < this.posiciones.length; fila++) {
+      for (let columna = 0; columna < this.posiciones; columna++) {
+        this.posiciones[fila][columna] = '-';
+      }
+    }
+  }
 }

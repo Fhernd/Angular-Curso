@@ -18,6 +18,8 @@ export class AppComponent {
     if (this.casillaLibre(fila, columna)) {
       this.posiciones[fila][columna] = this.jugadorActual;
       this.verificarGano('X');
+      this.verificarGano('O');
+      this.cambiarJugador();
     }
   }
 
@@ -72,6 +74,14 @@ export class AppComponent {
       this.posiciones[1][1] == jugador &&
       this.posiciones[2][0] == jugador) {
       alert(`Ganó: ${jugador}`);
+    }
+  }
+
+  cambiarJugador() {
+    if (this.jugadorActual == 'O') {
+      this.jugadorActual = 'X';
+    } else {
+      this.jugadorActual = 'O';
     }
   }
 }

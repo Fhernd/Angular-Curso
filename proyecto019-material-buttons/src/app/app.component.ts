@@ -7,9 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   posiciones = [
-    ['-', '-', '-'], 
-    ['-', '-', '-'], 
-    ['-', '-', '-'] 
+    ['-', '-', '-'],
+    ['-', '-', '-'],
+    ['-', '-', '-']
   ];
 
   jugadorActual = 'O';
@@ -21,11 +21,57 @@ export class AppComponent {
     }
   }
 
-  casillaLibre(fila: number, columna: number) : boolean {
+  casillaLibre(fila: number, columna: number): boolean {
     return this.posiciones[fila][columna] == '-';
   }
 
   verificarGano(jugador: string) {
-    
+    if (this.posiciones[0][0] == jugador &&
+      this.posiciones[0][1] == jugador &&
+      this.posiciones[0][2] == jugador) {
+      alert(`Ganó: ${jugador}`);
+    }
+
+    if (this.posiciones[1][0] == jugador &&
+      this.posiciones[1][1] == jugador &&
+      this.posiciones[1][2] == jugador) {
+      alert(`Ganó: ${jugador}`);
+    }
+
+    if (this.posiciones[2][0] == jugador &&
+      this.posiciones[2][1] == jugador &&
+      this.posiciones[2][2] == jugador) {
+      alert(`Ganó: ${jugador}`);
+    }
+
+    if (this.posiciones[0][0] == jugador &&
+      this.posiciones[1][0] == jugador &&
+      this.posiciones[2][0] == jugador) {
+      alert(`Ganó: ${jugador}`);
+    }
+
+    if (this.posiciones[0][1] == jugador &&
+      this.posiciones[1][1] == jugador &&
+      this.posiciones[2][1] == jugador) {
+      alert(`Ganó: ${jugador}`);
+    }
+
+    if (this.posiciones[0][2] == jugador &&
+      this.posiciones[1][2] == jugador &&
+      this.posiciones[2][2] == jugador) {
+      alert(`Ganó: ${jugador}`);
+    }
+
+    if (this.posiciones[0][0] == jugador &&
+      this.posiciones[1][1] == jugador &&
+      this.posiciones[2][2] == jugador) {
+      alert(`Ganó: ${jugador}`);
+    }
+
+    if (this.posiciones[0][2] == jugador &&
+      this.posiciones[1][1] == jugador &&
+      this.posiciones[2][0] == jugador) {
+      alert(`Ganó: ${jugador}`);
+    }
   }
 }

@@ -14,7 +14,7 @@ export class AppComponent {
 
   jugadorActual = 'O';
 
-  precion(fila: number, columna: number) {
+  presion(fila: number, columna: number) {
     if (this.casillaLibre(fila, columna)) {
       this.posiciones[fila][columna] = this.jugadorActual;
       this.verificarGano('X');
@@ -87,7 +87,7 @@ export class AppComponent {
 
   reiniciar() {
     for (let fila = 0; fila < this.posiciones.length; fila++) {
-      for (let columna = 0; columna < this.posiciones; columna++) {
+      for (let columna = 0; columna < this.posiciones.length; columna++) {
         this.posiciones[fila][columna] = '-';
       }
     }

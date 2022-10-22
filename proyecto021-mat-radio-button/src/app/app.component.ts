@@ -10,26 +10,26 @@ export class AppComponent {
   valor2!: number;
   resultado!: number;
 
-  operacionSeleccionada: string = 'suma';
+  operacionSeleccionada: string = 'Suma';
   tipoOperaciones = [
-    'suma', 
-    'resta', 
-    'multiplicacion', 
-    'division'
+    'Suma', 
+    'Resta', 
+    'Multiplicación', 
+    'División'
   ];
 
   operar() {
     switch(this.operacionSeleccionada) {
-      case 'suma':
+      case 'Suma':
         this.resultado = this.valor1 + this.valor2;
         break;
-      case 'resta':
+      case 'Resta':
         this.resultado = this.valor1 - this.valor2;
         break;
-      case 'multiplicacion':
+      case 'Multiplicación':
         this.resultado = this.valor1 * this.valor2;
         break;
-      case 'division':
+      case 'División':
         this.resultado = this.valor1 / this.valor2;
         break;
     }

@@ -10,8 +10,8 @@
       {{o}}
     </mat-radio-button>
   </mat-radio-group>
-  <button mat-raised-button color="primary" (click)="operar">Calcular</button>
+  <button mat-raised-button color="primary" (click)="operar()">Calcular</button>
   <p>
-    El resultado es: {{resultado}}
+    El resultado es: {{resultado | number: '1.1-2'}}
   </p>
 </div>

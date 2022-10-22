@@ -6,5 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'proyecto024-mat-slider';
+  valorSlider1 = 0;
+  valorSlider2 = 0;
+  valorSlider3 = 0;
+  suma = 0;
+
+  cambiar() {
+    this.suma = this.valorSlider1 + this.valorSlider2 + this.valorSlider3;
+  }
 }

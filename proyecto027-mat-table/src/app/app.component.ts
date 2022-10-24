@@ -16,7 +16,7 @@ export class AppComponent {
     new Articulo(3, 'naranjas', 1500), 
   ];
 
-  articuloSelecciondo: Articulo = new Articulo(0, '', 0);
+  articuloSeleccionado: Articulo = new Articulo(0, '', 0);
 
   @ViewChild(MatTable) tablaArticulos!: MatTable<Articulo>;
 
@@ -27,5 +27,9 @@ export class AppComponent {
     }
   }
 
-  
+  agregarFila() {
+    this.datos.push(new Articulo(this.articuloSeleccionado.codigo, this.articuloSeleccionado.descripcion, this.articuloSeleccionado.precio));
+    this.tablaArticulos.renderRows();
+    this.articuloSeleccionado = new Articulo(0, '', 0);
+  }
 }

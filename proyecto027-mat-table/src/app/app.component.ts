@@ -8,7 +8,7 @@ import { Articulo } from './models/articulo';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  columnas: string[] = ['Código', 'Descripción', 'Precio'];
+  columnas: string[] = ['codigo', 'descripcion', 'precio'];
 
   datos: Articulo[] = [
     new Articulo(1, 'papas', 1000), 
@@ -20,9 +20,9 @@ export class AppComponent {
 
   @ViewChild(MatTable) tablaArticulos!: MatTable<Articulo>;
 
-  borrarFila(codigo: number) {
+  borrarFila(indiceFila: number) {
     if (confirm('¿Realmente quiere borrar este registro?')) {
-      this.datos.splice(codigo, 1);
+      this.datos.splice(indiceFila, 1);
       this.tablaArticulos.renderRows();
     }
   }

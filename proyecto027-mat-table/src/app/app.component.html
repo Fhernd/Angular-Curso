@@ -23,4 +23,16 @@
   <tr mat-row *matRowDef="let row; columns: columnas"></tr>
 </table>
 <br>
-<div class="contenedor"></div>
+<div class="contenedor">
+  <mat-form-field>
+    <input type="number" matInput [(ngModel)]="articuloSeleccionado.codigo" placeholder="Ingrese el código del artículo">
+  </mat-form-field>
+  <mat-form-field>
+    <input type="text" matInput [(ngModel)]="articuloSeleccionado.descripcion" placeholder="Ingrese la descripción del artículo">
+  </mat-form-field>
+  <mat-form-field>
+    <input type="number" matInput [(ngModel)]="articuloSeleccionado.precio" placeholder="Ingrese el precio del artículo">
+  </mat-form-field>
+
+  <button mat-raised-button color="primary" (click)="agregarArticulo()">Agregar</button>
+</div>

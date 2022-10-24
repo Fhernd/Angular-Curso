@@ -27,7 +27,7 @@ export class AppComponent {
     }
   }
 
-  agregarFila() {
+  agregarArticulo() {
     this.datos.push(new Articulo(this.articuloSeleccionado.codigo, this.articuloSeleccionado.descripcion, this.articuloSeleccionado.precio));
     this.tablaArticulos.renderRows();
     this.articuloSeleccionado = new Articulo(0, '', 0);

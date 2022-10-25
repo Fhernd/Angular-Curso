@@ -6,5 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'proyecto028-mat-paginator';
+  columnas: string[] = ['codigo', 'descripcion', 'precio'];
+
+  // datos: Articulo
 }

@@ -6,5 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'proyecto029-table-matsort';
+  columnas: string[] = ['codigo', 'descripcion', 'precio'];
+
+  // articulos: 
 }

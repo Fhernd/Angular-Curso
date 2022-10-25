@@ -14,13 +14,13 @@ export class AppComponent implements OnInit {
   articulos: Articulo[] = [];
   dataSource: any;
 
-  @ViewChild(MatPaginator, {static: true}) paginador!: MatPaginator;
+  @ViewChild(MatPaginator, { static: true }) paginador!: MatPaginator;
 
   ngOnInit(): void {
     for (let x = 1; x <= 100; x++) {
       this.articulos.push(new Articulo(x, `Artículo ${x}`, Math.trunc(Math.random() * 1000)));
-      this.dataSource = new MatTableDataSource<Articulo>(this.articulos);
-      this.dataSource.paginator = this.paginador;
     }
+    this.dataSource = new MatTableDataSource<Articulo>(this.articulos);
+    this.dataSource.paginator = this.paginador;
   }
 }

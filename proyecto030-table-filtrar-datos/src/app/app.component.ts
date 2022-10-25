@@ -6,5 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'proyecto030-table-filtrar-datos';
+  columnas: string[] = ['codigo', 'descripcion', 'precio'];
+
+  
 }

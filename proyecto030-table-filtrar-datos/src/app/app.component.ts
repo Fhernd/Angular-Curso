@@ -23,6 +23,8 @@ export class AppComponent implements OnInit {
 
   filtrar(event: Event) {
     const filtro = (event.target as HTMLInputElement).value;
-    this.dataSource.filter = filtro.trim().toLowerCase;
+    console.log(filtro);
+    
+    this.dataSource.filter = filtro.trim().toLowerCase();
   }
 }

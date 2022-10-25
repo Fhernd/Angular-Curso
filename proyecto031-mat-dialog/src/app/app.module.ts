@@ -3,10 +3,12 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ArticuloDialogoComponent } from './dialogs/articulo-dialogo/articulo-dialogo.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ArticuloDialogoComponent
   ],
   imports: [
     BrowserModule,

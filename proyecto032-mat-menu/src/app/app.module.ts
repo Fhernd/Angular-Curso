@@ -6,12 +6,14 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { JuegoDadosComponent } from './juego-dados/juego-dados.component';
 import { DadoComponent } from './dado/dado.component';
+import { AcercaDeComponent } from './acerca-de/acerca-de.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     JuegoDadosComponent,
-    DadoComponent
+    DadoComponent,
+    AcercaDeComponent
   ],
   imports: [
     BrowserModule,

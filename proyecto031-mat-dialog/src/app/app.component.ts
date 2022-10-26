@@ -43,4 +43,11 @@ export class AppComponent {
     this.articulos.push(new Articulo(articulo.codigo, articulo.descripcion, articulo.precio));
     this.tablaArticulos.renderRows();
   }
+
+  borrarFila(indice: number) {
+    if (confirm('¿Está seguro que quiere eliminar este artículo?')) {
+      this.articulos.splice(indice, 1);
+      this.tablaArticulos.renderRows();
+    }
+  }
 }

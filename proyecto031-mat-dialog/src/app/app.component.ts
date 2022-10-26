@@ -1,4 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { MatTable, MatTableDataSource } from '@angular/material/table';
+import { Articulo } from './models/articulo';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +9,20 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'proyecto031-mat-dialog';
+  columnas: string[] = ['codigo', 'descripcion', 'precio'];
+
+  articulos: Array<Articulo> = [
+    new Articulo(1, 'papas', 100),
+    new Articulo(2, 'manzanas', 200),
+    new Articulo(3, 'naranjas', 250),
+  ];
+
+  dataSource = new MatTableDataSource<Articulo>(this.articulos);
+
+  @ViewChild(MatTable)
+  tablaArticulos!: MatTable<Articulo>;
+
+  constructor(public dialog: MatDialog) {
+
+  }
 }

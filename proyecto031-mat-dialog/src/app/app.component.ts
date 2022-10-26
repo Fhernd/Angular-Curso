@@ -10,7 +10,7 @@ import { Articulo } from './models/articulo';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  columnas: string[] = ['codigo', 'descripcion', 'precio'];
+  columnas: string[] = ['codigo', 'descripcion', 'precio', 'borrar'];
 
   articulos: Array<Articulo> = [
     new Articulo(1, 'papas', 100),

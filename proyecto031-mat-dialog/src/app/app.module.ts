@@ -5,6 +5,13 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ArticuloDialogoComponent } from './dialogs/articulo-dialogo/articulo-dialogo.component';
 
+import { FormsModule } from '@angular/forms';
+
+import { MatInputModule } from '@angular/material/input';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatButtonModule } from '@angular/material/button';
+import { MatTableModule } from '@angular/material/table';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -12,7 +19,12 @@ import { ArticuloDialogoComponent } from './dialogs/articulo-dialogo/articulo-di
   ],
   imports: [
     BrowserModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule, 
+    MatInputModule, 
+    FormsModule, 
+    MatDialogModule, 
+    MatButtonModule, 
+    MatTableModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,8 +1,12 @@
+<h1>Menú</h1>
 <div style="text-align: left;">
-  <button mat-flat-button [matMenuTriggerFor]="menu"></button>
+  <button mat-flat-button [matMenuTriggerFor]="menu" color="primary">Opciones del sitio</button>
 
   <mat-menu #menu="matMenu">
     <button mat-menu-item routerLink="/juego-dados">Juego de dados</button>
     <button mat-menu-item routerLink="/acerca-de">Acerca de...</button>
   </mat-menu>
+</div>
+<div style="text-align: center;">
+  <router-outlet></router-outlet>
 </div>

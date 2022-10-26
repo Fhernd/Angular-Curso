@@ -1,1 +1,9 @@
-<p>juego-dados works!</p>
+<app-dado [valor]="valorDado1"></app-dado>
+<app-dado [valor]="valorDado2"></app-dado>
+<app-dado [valor]="valorDado3"></app-dado>
+<hr>
+<button mat-raised-button (click)="tirar()">Tirar</button>
+<hr>
+<p>
+    Resultado: {{resultado}}
+</p>

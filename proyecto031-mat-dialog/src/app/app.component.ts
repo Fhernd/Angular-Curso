@@ -1,6 +1,7 @@
 import { Component, ViewChild } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { MatTable, MatTableDataSource } from '@angular/material/table';
+import { ArticuloDialogoComponent } from './dialogs/articulo-dialogo/articulo-dialogo.component';
 import { Articulo } from './models/articulo';
 
 @Component({
@@ -24,5 +25,17 @@ export class AppComponent {
 
   constructor(public dialog: MatDialog) {
 
+  }
+
+  abrirDialog() {
+    const dialogoArticulo = this.dialog.open(ArticuloDialogoComponent, {
+      data: new Articulo(0, '', 0)
+    });
+
+    dialogoArticulo.afterClosed().subscribe(e => {
+      if (e) {
+        this.agregarArticulo(e);
+      }
+    });
   }
 }

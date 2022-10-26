@@ -10,7 +10,7 @@ export class JuegoDadosComponent implements OnInit {
   valorDado1!: number;
   valorDado2!: number;
   valorDado3!: number;
-  resultado!: number;
+  resultado!: string;
 
   constructor() {
     this.valorDado1 = this.generarAleatorio();
@@ -23,5 +23,17 @@ export class JuegoDadosComponent implements OnInit {
 
   generarAleatorio() {
     return Math.trunc(Math.random() * 6) + 1;
+  }
+
+  tirar() {
+    this.valorDado1 = this.generarAleatorio();
+    this.valorDado2 = this.generarAleatorio();
+    this.valorDado3 = this.generarAleatorio();
+
+    if (this.valorDado1 == this.valorDado2 && this.valorDado1 == this.valorDado3) {
+      this.resultado = 'Ganó';
+    } else {
+      this.resultado = 'Perdió';
+    }
   }
 }

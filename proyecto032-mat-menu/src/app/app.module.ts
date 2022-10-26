@@ -8,6 +8,9 @@ import { JuegoDadosComponent } from './juego-dados/juego-dados.component';
 import { DadoComponent } from './dado/dado.component';
 import { AcercaDeComponent } from './acerca-de/acerca-de.component';
 
+import { MatButtonModule } from '@angular/material/button';
+import {MatMenuModule} from '@angular/material/menu';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,7 +21,9 @@ import { AcercaDeComponent } from './acerca-de/acerca-de.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatButtonModule,
+    MatMenuModule
   ],
   providers: [],
   bootstrap: [AppComponent]

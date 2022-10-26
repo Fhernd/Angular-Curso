@@ -38,4 +38,9 @@ export class AppComponent {
       }
     });
   }
+  
+  agregarArticulo(articulo: Articulo) {
+    this.articulos.push(new Articulo(articulo.codigo, articulo.descripcion, articulo.precio));
+    this.tablaArticulos.renderRows();
+  }
 }

@@ -21,4 +21,8 @@ export class AppComponent implements OnInit {
     this.usuarioService.obtener()
       .subscribe(resultado => this.usuario = resultado);
   }
+
+  recargar() {
+    this.recuperarPersona();
+  }
 }

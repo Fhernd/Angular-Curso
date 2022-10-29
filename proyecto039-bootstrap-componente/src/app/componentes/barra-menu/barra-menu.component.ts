@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'bs-barra-menu',
@@ -7,9 +7,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BarraMenuComponent implements OnInit {
 
+  @Input()
+  opciones!: string[];
+  @Input()
+  colorFondo!: string;
+  @Output()
+  presionOpcion = new EventEmitter();
+
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  presion(i: number): void {
+    this.presionOpcion.emit(i);
+  }
 }

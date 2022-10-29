@@ -6,5 +6,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'proyecto039-bootstrap-componente';
+  opciones = [
+    'JavaScript',
+    'TypeScript',
+    'Angular',
+    'Framework Web',
+    'Internet'
+  ]
+
+  presion(opcion: number) {
+    alert(`Se informa que se presionó la opción: ${this.opciones[opcion]}`);
+  }
 }

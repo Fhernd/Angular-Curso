@@ -1,1 +1,7 @@
-<p>barra-menu works!</p>
+<nav class="navbar navbar-expand-sm navbar-dark {{colorFondo}}">
+    <ul class="navbar-nav">
+        <li class="nav-item" *ngFor="let o of opciones; let i = index">
+            <a href="#" class="nav-link" (click)="presion(i + 1)">{{o}}</a>
+        </li>
+    </ul>
+</nav>

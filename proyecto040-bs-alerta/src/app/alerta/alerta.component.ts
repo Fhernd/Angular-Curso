@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'bs-alerta',
@@ -6,6 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./alerta.component.css']
 })
 export class AlertaComponent implements OnInit {
+  @Input()
+  color!: string;
+  @Input()
+  mensaje!: string;
 
   constructor() { }
 

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { UsuarioService } from './services/usuario.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,17 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'proyecto042-bs-tarjeta';
+  usuario: any;
+
+  constructor(private usuarioService: UsuarioService) {
+
+  }
+
+  recuperarPersona() {
+    this.usuarioService.obtener().subscribe((resultado) => this.usuario = resultado);
+  }
+
+  presion() {
+    this.recuperarPersona();
+  }
 }

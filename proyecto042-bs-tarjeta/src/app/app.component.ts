@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { UsuarioService } from './services/usuario.service';
 
 @Component({
@@ -6,7 +6,7 @@ import { UsuarioService } from './services/usuario.service';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   usuario: any;
 
   constructor(private usuarioService: UsuarioService) {
@@ -19,5 +19,9 @@ export class AppComponent {
 
   presion() {
     this.recuperarPersona();
+  }
+
+  ngOnInit(): void {
+      this.recuperarPersona();
   }
 }

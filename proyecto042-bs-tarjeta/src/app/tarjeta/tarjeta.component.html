@@ -1,1 +1,10 @@
-<p>tarjeta works!</p>
+<div class="card" style="width: 18rem; margin: 1rem;" *ngIf="datos ! null">
+    <img src="{{datos.foto}}" alt="Foto" class="card-img-top">
+    <div class="card-body">
+        <h5 class="card-title">{{datos.nombre}}</h5>
+        <p class="card-text">
+            {{datos.mail}}<br>
+        </p>
+        <a href="#" class="btn btn-primary" (click)="presion()">¿Otra persona?</a>
+    </div>
+</div>

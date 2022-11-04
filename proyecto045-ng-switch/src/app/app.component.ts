@@ -6,5 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'proyecto045-ng-switch';
+  valor1!: number;
+  valor2!: number;
+  operacion: string = 'Ninguna';
+  resultado!: number;
 }

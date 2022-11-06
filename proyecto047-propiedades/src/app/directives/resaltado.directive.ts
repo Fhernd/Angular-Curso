@@ -17,7 +17,7 @@ export class ResaltadoDirective implements OnInit, OnChanges {
   }
 
   ngOnChanges(changes: SimpleChanges) {
-    this.actualizar
+    this.actualizar();
   }
 
   actualizar() {

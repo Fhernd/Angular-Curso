@@ -17,6 +17,14 @@ export class ResaltadoDirective implements OnInit {
   }
 
   actualizar() {
-    
+    if (this.colorResaltado != null) {
+      this.elemento.nativeElement.style.backgroundColor = this.colorResaltado;
+    } else {
+      this.elemento.nativeElement.style.backgroundColor = 'yellow';
+    }
+
+    if (this.tamano > 0) {
+      this.elemento.nativeElement.style.fontSize = `${this.tamano}px`;
+    }
   }
 }

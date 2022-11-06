@@ -6,5 +6,18 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'proyecto047-propiedades';
+  colorSeleccionado = 'green';
+  tamanoFuente = 30;
+
+  cambiarColor(color: string) {
+    this.colorSeleccionado = color;
+  }
+
+  agrandar() {
+    ++this.tamanoFuente;
+  }
+
+  reducir() {
+    --this.tamanoFuente;
+  }
 }

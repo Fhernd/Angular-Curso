@@ -2,10 +2,12 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
+import { ResaltadoDirective } from './directives/resaltado.directive';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ResaltadoDirective
   ],
   imports: [
     BrowserModule

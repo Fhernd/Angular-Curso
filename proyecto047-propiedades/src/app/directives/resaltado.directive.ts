@@ -1,9 +1,9 @@
-import { Directive, ElementRef, Input, OnInit } from '@angular/core';
+import { Directive, ElementRef, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 
 @Directive({
   selector: '[appResaltado]'
 })
-export class ResaltadoDirective implements OnInit {
+export class ResaltadoDirective implements OnInit, OnChanges {
 
   @Input('appResaltado')
   colorResaltado!: string;
@@ -13,7 +13,11 @@ export class ResaltadoDirective implements OnInit {
   constructor(private elemento: ElementRef) { }
 
   ngOnInit(): void {
-      this.actualizar();
+    this.actualizar();
+  }
+
+  ngOnChanges(changes: SimpleChanges) {
+    this.actualizar
   }
 
   actualizar() {

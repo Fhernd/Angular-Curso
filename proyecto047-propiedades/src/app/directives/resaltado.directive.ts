@@ -1,10 +1,22 @@
-import { Directive } from '@angular/core';
+import { Directive, ElementRef, Input, OnInit } from '@angular/core';
 
 @Directive({
   selector: '[appResaltado]'
 })
-export class ResaltadoDirective {
+export class ResaltadoDirective implements OnInit {
 
-  constructor() { }
+  @Input('appResaltado')
+  colorResaltado!: string;
+  @Input('tamano')
+  tamano: number = 0;
 
+  constructor(private elemento: ElementRef) { }
+
+  ngOnInit(): void {
+      this.actualizar();
+  }
+
+  actualizar() {
+    
+  }
 }

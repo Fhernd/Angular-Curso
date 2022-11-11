@@ -10,6 +10,7 @@ import { ArgentinaComponent } from './components/america/argentina/argentina.com
 import { EuropaComponent } from './components/europa/europa.component';
 import { EspanaComponent } from './components/europa/espana/espana.component';
 import { AlemaniaComponent } from './components/europa/alemania/alemania.component';
+import { ItaliaComponent } from './components/europa/italia/italia.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { AlemaniaComponent } from './components/europa/alemania/alemania.compone
     ArgentinaComponent,
     EuropaComponent,
     EspanaComponent,
-    AlemaniaComponent
+    AlemaniaComponent,
+    ItaliaComponent
   ],
   imports: [
     BrowserModule,

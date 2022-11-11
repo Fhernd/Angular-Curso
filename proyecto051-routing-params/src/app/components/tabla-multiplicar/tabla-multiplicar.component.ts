@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, ParamMap } from '@angular/router';
 
 @Component({
   selector: 'app-tabla-multiplicar',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TablaMultiplicarComponent implements OnInit {
 
-  constructor() { }
+  numero!: number;
+
+  constructor(private activatedRoute: ActivatedRoute) { }
 
   ngOnInit(): void {
+    this.activatedRoute.paramMap.subscribe((parametros: ParamMap) => {
+      this.numero = parseInt(parametros.get('numero')!);
+    });
   }
 
 }

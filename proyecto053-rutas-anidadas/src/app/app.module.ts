@@ -4,11 +4,13 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AmericaComponent } from './components/america/america.component';
+import { ColombiaComponent } from './components/america/colombia/colombia.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    AmericaComponent
+    AmericaComponent,
+    ColombiaComponent
   ],
   imports: [
     BrowserModule,

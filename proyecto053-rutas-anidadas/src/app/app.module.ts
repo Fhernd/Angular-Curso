@@ -7,6 +7,7 @@ import { AmericaComponent } from './components/america/america.component';
 import { ColombiaComponent } from './components/america/colombia/colombia.component';
 import { MexicoComponent } from './components/america/mexico/mexico.component';
 import { ArgentinaComponent } from './components/america/argentina/argentina.component';
+import { EuropaComponent } from './components/europa/europa.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { ArgentinaComponent } from './components/america/argentina/argentina.com
     AmericaComponent,
     ColombiaComponent,
     MexicoComponent,
-    ArgentinaComponent
+    ArgentinaComponent,
+    EuropaComponent
   ],
   imports: [
     BrowserModule,

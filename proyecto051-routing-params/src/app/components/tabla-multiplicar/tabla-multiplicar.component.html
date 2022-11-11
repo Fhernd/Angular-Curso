@@ -1,1 +1,20 @@
-<p>tabla-multiplicar works!</p>
+<table border="1" *ngIf="numero != null">
+    <thead>
+        <tr>
+            <th>Número</th>
+            <th></th>
+            <th>Multiplicador</th>
+            <th></th>
+            <th>Resultado</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let multiplicador of [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]">
+            <td>{{numero}}</td>
+            <td>x</td>
+            <td>{{multiplicador}}</td>
+            <td>=</td>
+            <td>{{numero * multiplicador}}</td>
+        </tr>
+    </tbody>
+</table>

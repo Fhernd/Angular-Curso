@@ -9,10 +9,10 @@ import { FormControl } from '@angular/forms';
 export class AppComponent implements OnInit {
   actividad = new FormControl();
 
-  lista!: string[];
+  actividades!: string[];
 
   ngOnInit() : void {
-    this.lista = [];
+    this.actividades = [];
 
     const datos = localStorage.getItem('actividades');
 
@@ -21,28 +21,28 @@ export class AppComponent implements OnInit {
 
       if (arreglo != null) {
         for (const actividad of arreglo) {
-          this.lista.push(actividad);
+          this.actividades.push(actividad);
         }
       }
     }
   }
 
   agregar() {
-    this.lista.push(this.actividad.value);
-    localStorage.setItem('actividades', JSON.stringify(this.lista));
+    this.actividades.push(this.actividad.value);
+    localStorage.setItem('actividades', JSON.stringify(this.actividades));
 
     this.actividad.setValue('');
   }
 
   borrar(posicion: number) {
-    this.lista.splice(posicion, 1);
+    this.actividades.splice(posicion, 1);
     localStorage.clear();
     
-    localStorage.setItem('actividades', JSON.stringify(this.lista));
+    localStorage.setItem('actividades', JSON.stringify(this.actividades));
   }
 
   borrarTodas() {
     localStorage.clear();
-    this.lista = [];
+    this.actividades = [];
   }
 }

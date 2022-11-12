@@ -7,7 +7,7 @@ import { FormControl, FormGroup } from '@angular/forms';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  conversion!: string;
+  conversion: string = '';
   potenciaNumero!: number;
   cantidadDigitos!: number;
 
@@ -19,16 +19,21 @@ export class AppComponent {
   });
 
   onSubmit() {
+    let valor = this.formularioConversion.value.numeroDecimal;
+    valor = valor ? valor : '0';
+
     if(this.formularioConversion.value.base == 'hexadecimal') {
-      this.conversion = parseInt(this.formularioConversion.value.numeroDecimal).toString(16);
+      this.conversion = parseInt(valor).toString(16);
     } else if(this.formularioConversion.value.base == 'octal') {
-      this.conversion = parseInt(this.formularioConversion.value.numeroDecimal).toString(8);
+      this.conversion = parseInt(valor).toString(8);
     }
 
-    this.potenciaNumero = Math.pow(parseInt(this.formularioConversion.value.numeroDecimal), parseInt(this.formularioConversion.value.potencia));
+    let potencia = this.formularioConversion.value.potencia;
+    potencia = potencia ? potencia : '1';
+    this.potenciaNumero = Math.pow(parseInt(valor), parseInt(potencia));
 
     if (this.formularioConversion.value.largo) {
-      this.cantidadDigitos = this.formularioConversion.value.numeroDecimal?.length;
+      this.cantidadDigitos = valor.length;
     }
   }
 }

@@ -3,11 +3,13 @@ import { CommonModule } from '@angular/common';
 
 import { AmericaRoutingModule } from './america-routing.module';
 import { ColombiaComponent } from './america/colombia/colombia.component';
+import { ArgentinaComponent } from './america/argentina/argentina.component';
 
 
 @NgModule({
   declarations: [
-    ColombiaComponent
+    ColombiaComponent,
+    ArgentinaComponent
   ],
   imports: [
     CommonModule,

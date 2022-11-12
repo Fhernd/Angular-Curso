@@ -26,4 +26,23 @@ export class AppComponent implements OnInit {
       }
     }
   }
+
+  agregar() {
+    this.lista.push(this.actividad.value);
+    localStorage.setItem('actividades', JSON.stringify(this.lista));
+
+    this.actividad.setValue('');
+  }
+
+  borrar(posicion: number) {
+    this.lista.splice(posicion, 1);
+    localStorage.clear();
+    
+    localStorage.setItem('actividades', JSON.stringify(this.lista));
+  }
+
+  borrarTodas() {
+    localStorage.clear();
+    this.lista = [];
+  }
 }

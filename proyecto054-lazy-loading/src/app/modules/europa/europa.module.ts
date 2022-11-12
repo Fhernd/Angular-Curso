@@ -3,11 +3,13 @@ import { CommonModule } from '@angular/common';
 
 import { EuropaRoutingModule } from './europa-routing.module';
 import { EspanaComponent } from './europa/espana/espana.component';
+import { AlemaniaComponent } from './europa/alemania/alemania.component';
 
 
 @NgModule({
   declarations: [
-    EspanaComponent
+    EspanaComponent,
+    AlemaniaComponent
   ],
   imports: [
     CommonModule,

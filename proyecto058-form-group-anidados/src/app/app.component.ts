@@ -21,13 +21,13 @@ export class AppComponent {
 
   onSubmit() {
     const nota1 = parseInt(this.formularioAlumno.value.notas?.nota1);
-    const nota2 = parseInt(this.formularioAlumno.value.notas?.nota1);
-    const nota3 = parseInt(this.formularioAlumno.value.notas?.nota1);
+    const nota2 = parseInt(this.formularioAlumno.value.notas?.nota2);
+    const nota3 = parseInt(this.formularioAlumno.value.notas?.nota3);
 
     if (nota1 >= 4 && nota2 >= 4 && nota3 >= 4) {
       this.resultado = 'El alumno queda aprobado por esas notas';
     } else {
-      this.resultado = 'El alumno no paureba por esas notas';
+      this.resultado = 'El alumno no aprueba por esas notas';
     }
   }
 }

@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { FormGroup, FormControl } from '@angular/forms';
+import { ValidacionesPropias } from './models/validations/validaciones-propias';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'proyecto060-validaciones-propias';
+  formularioContacto = new FormGroup({
+    numero: new FormControl('', [ValidacionesPropias.multiplo5])
+  });
+
+  onSubmit() {
+    alert('Dato correcto');
+  }
 }
